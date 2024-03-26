@@ -10,7 +10,7 @@ const BooksDetails = () => {
     const {book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, review } = book;
 
     const handleBookRead = () =>{
-        saveLocalData(idInt)
+        saveLocalData(book)
     }
 
     return (

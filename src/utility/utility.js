@@ -9,11 +9,11 @@ const getLocalData = ()=>{
     return [];
 
 }
-const saveLocalData = (id) => {
+const saveLocalData = (data) => {
         const getStoredData = getLocalData();
-        const isExit = getStoredData.find(getId => getId === id)
+        const isExit = getStoredData.find(getId => getId.id === data.id)
         if(!isExit){
-            getStoredData.push(id)
+            getStoredData.push(data)
             localStorage.setItem('read-books', JSON.stringify(getStoredData));
             toast('Books Added to Read List', {
                 style: {
