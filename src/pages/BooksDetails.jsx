@@ -35,8 +35,8 @@ const BooksDetails = () => {
                     <p className='text-black text-xl font-medium flex items-center justify-between'>Rating: <span className='font-bold text-2xl'>{rating}</span></p>
                 </div>
                 <div className='space-x-7'>
-                    <Link to={'/booklist'} onClick={()=>handleBookRead(id)} className="py-5 px-7 rounded-lg font-bold text-[#ffff] bg-praimary hover:bg-praimary">Read</Link>
-                    <Link to={'/booklist/whishlist'} className="py-5 px-7 rounded-lg font-bold text-[#ffff]  bg-second hover:bg-second">Wishlist</Link>
+                    <Link onClick={()=>handleBookRead(id)} className="py-5 px-7 rounded-lg font-bold text-[#ffff] bg-praimary hover:bg-praimary">Read</Link>
+                    <Link className="py-5 px-7 rounded-lg font-bold text-[#ffff]  bg-second hover:bg-second">Wishlist</Link>
                 </div>
             </div>
         </div>
