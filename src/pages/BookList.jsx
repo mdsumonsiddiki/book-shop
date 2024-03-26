@@ -1,7 +1,10 @@
 // import { FaAngleDown } from "react-icons/fa6";
+import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const BookList = () => {
+    const [tabIndex, setTabIndex] = useState(0);
+
     return (
         <div className="container mx-auto mt-7">
             <div className="bg-black bg-opacity-5 text-center p-8 rounded-xl">
@@ -18,10 +21,10 @@ const BookList = () => {
                 </details>
             </div>
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap mt-10">
-                <Link href="#" className="px-5 py-3 border-b text-2xl text-black font-bold">
+                <Link to='' onClick={() => setTabIndex(0)} className={`px-5 py-3 text-2xl text-black font-bold ${tabIndex === 0 ? 'border-2 border-b-0 rounded-t-xl' : "border-b"}`}>
                     Read Books
                 </Link>
-                <Link className="px-5 py-3 border border-b-0 rounded-t-lg text-2xl text-black font-bold">
+                <Link to={'wishlist'} onClick={() => setTabIndex(1)} className={`px-5 py-3 text-2xl text-black font-bold ${tabIndex === 1 ? 'border-2 border-b-0 rounded-t-xl' : "border-b"}`}>
                     Wishlist Books
                 </Link>
             </div>

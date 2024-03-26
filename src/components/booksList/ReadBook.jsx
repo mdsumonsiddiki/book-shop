@@ -1,15 +1,20 @@
 
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import { useLoaderData } from "react-router-dom";
+import { getLocalData } from "../../utility/utility";
 
 const ReadBook = () => {
     const [books, setBooks] = useState([])
+    const data = useLoaderData()
     useEffect(() => {
-        const localData = JSON.parse(localStorage.getItem('read-books')) || [];
-        setBooks(localData);
-        setBooks(localData);
-    }, [])
-    console.log(books);
+       const localData = getLocalData();
+       if(data.length > 0){
+        const books = data.filter(book => localData.includes(book.id))
+        setBooks(books);
+        }
+        
+    }, [data]);
     return (
         <div className="mt-10 space-y-6">
             {

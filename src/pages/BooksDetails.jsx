@@ -1,5 +1,5 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
-import { saveLocalData } from '../utility/utility';
+import { saveLocalData, saveWishData } from '../utility/utility';
 
 
 const BooksDetails = () => {
@@ -10,7 +10,10 @@ const BooksDetails = () => {
     const {book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, review } = book;
 
     const handleBookRead = () =>{
-        saveLocalData(book)
+        saveLocalData(idInt)
+    }
+    const handleWhiteList = ()=>{
+        saveWishData(idInt)
     }
 
     return (
@@ -35,8 +38,8 @@ const BooksDetails = () => {
                     <p className='text-black text-xl font-medium flex items-center justify-between'>Rating: <span className='font-bold text-2xl'>{rating}</span></p>
                 </div>
                 <div className='space-x-7'>
-                    <Link onClick={()=>handleBookRead(id)} className="py-5 px-7 rounded-lg font-bold text-[#ffff] bg-praimary hover:bg-praimary">Read</Link>
-                    <Link className="py-5 px-7 rounded-lg font-bold text-[#ffff]  bg-second hover:bg-second">Wishlist</Link>
+                    <Link onClick={handleBookRead} className="py-5 px-7 rounded-lg font-bold text-[#ffff] bg-praimary hover:bg-praimary">Read</Link>
+                    <Link onClick={handleWhiteList} className="py-5 px-7 rounded-lg font-bold text-[#ffff]  bg-second hover:bg-second">Wishlist</Link>
                 </div>
             </div>
         </div>
