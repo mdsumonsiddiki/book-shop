@@ -1,0 +1,206 @@
+[
+    {
+        "id": 1,
+        "book_name": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "https://i.ibb.co/wRP1cHp/The-Catcher-in-the-Rye.jpg",
+        "review": "Holden Caulfield, the protagonist of The Catcher in the Rye, is one of the most iconic characters in American literature. Salinger's portrayal of teenage angst and rebellion resonates with readers of all ages. Through Holden's journey, Salinger explores themes of identity, innocence, and societal expectations, making this novel a timeless classic.",
+        "total_pages": 277,
+        "rating": 4.2,
+        "category": "Fiction",
+        "tags": [
+            "Coming of Age",
+            "Classic",
+            "Teen"
+        ],
+        "publisher": "Little, Brown and Company",
+        "year_of_publishing": 1951
+    },
+    {
+        "id": 2,
+        "book_name": "1984",
+        "author": "George Orwell",
+        "image": "https://i.ibb.co/FD0BCYF/1984.jpg",
+        "review": "George Orwell's 1984 is a chilling portrayal of a dystopian society where totalitarianism reigns supreme. Through the eyes of Winston Smith, the reader is confronted with the horrors of surveillance, propaganda, and thought control. Orwell's prophetic vision continues to serve as a warning against the dangers of authoritarianism and the erosion of individual freedoms.",
+        "total_pages": 328,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Dystopian",
+            "Political",
+            "Classic"
+        ],
+        "publisher": "Secker & Warburg",
+        "year_of_publishing": 1949
+    },
+    {
+        "id": 3,
+        "book_name": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "https://i.ibb.co/3Nt5RrR/To-Kill-a-Mockingbird-first-edition-cover.jpg",
+        "review": "Harper Lee's To Kill a Mockingbird is a poignant exploration of racism, injustice, and moral growth in the American South. Through the eyes of young Scout Finch, readers witness the trial of Tom Robinson and the profound impact it has on her understanding of the world. Lee's masterful storytelling and timeless themes continue to resonate with readers today.",
+        "total_pages": 336,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Race Relations",
+            "Legal Drama"
+        ],
+        "publisher": "J. B. Lippincott & Co.",
+        "year_of_publishing": 1960
+    },
+    {
+        "id": 4,
+        "book_name": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/BTpRv6b/Pride-and-Prejudice.png",
+        "review": "Jane Austen's Pride and Prejudice is a timeless masterpiece of romance and social commentary. Through the spirited Elizabeth Bennet and the enigmatic Mr. Darcy, Austen navigates themes of class, marriage, and personal growth. With its sharp wit and memorable characters, Pride and Prejudice continues to captivate readers around the world.",
+        "total_pages": 432,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Romance",
+            "Classic",
+            "Regency"
+        ],
+        "publisher": "T. Egerton, Whitehall",
+        "year_of_publishing": 1813
+    },
+    {
+        "id": 5,
+        "book_name": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://i.ibb.co/MR5J1FN/The-Great-Gatsby.jpg",
+        "review": "F. Scott Fitzgerald's The Great Gatsby is a tragic tale of love, ambition, and the American Dream. Set amidst the decadence of the Jazz Age, the novel follows the enigmatic Jay Gatsby and his pursuit of the elusive Daisy Buchanan. Through Fitzgerald's lyrical prose, the reader is transported to a world of excess and disillusionment, where the pursuit of wealth and status ultimately leads to tragedy.",
+        "total_pages": 180,
+        "rating": 4.3,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Romance",
+            "1920s"
+        ],
+        "publisher": "Charles Scribner's Sons",
+        "year_of_publishing": 1925
+    },
+    {
+        "id": 6,
+        "book_name": "Moby-Dick",
+        "author": "Herman Melville",
+        "image": "https://i.ibb.co/ZSBngzG/Moby-Dick.jpg",
+        "review": "Herman Melville's Moby-Dick is a sprawling epic that explores the depths of obsession, revenge, and the human condition. Through the journey of Captain Ahab and his crew aboard the Pequod, Melville delves into themes of fate, madness, and the nature of evil. With its rich symbolism and philosophical depth, Moby-Dick remains one of the greatest American novels ever written.",
+        "total_pages": 624,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": [
+            "Adventure",
+            "Classic",
+            "Whaling"
+        ],
+        "publisher": "Harper & Brothers",
+        "year_of_publishing": 1851
+    },
+    {
+        "id": 7,
+        "book_name": "Frankenstein",
+        "author": "Mary Shelley",
+        "image": "https://i.ibb.co/Vx27Kv9/Frankenstein.png",
+        "review": "Mary Shelley's Frankenstein is a seminal work of Gothic literature that explores the consequences of scientific ambition and the nature of humanity. Through the tragic figure of Victor Frankenstein and his creation, the Creature, Shelley examines themes of isolation, responsibility, and the pursuit of knowledge. With its haunting imagery and moral complexity, Frankenstein continues to captivate readers over two centuries after its publication.",
+        "total_pages": 280,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": [
+            "Gothic",
+            "Science Fiction",
+            "Horror"
+        ],
+        "publisher": "Lackington, Hughes, Harding, Mavor & Jones",
+        "year_of_publishing": 1818
+    },
+    {
+        "id": 8,
+        "book_name": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/DVBcGmG/The-Hobbit.jpg",
+        "review": "J.R.R. Tolkien's The Hobbit is a timeless adventure that transports readers to the enchanting world of Middle-earth. Through the journey of Bilbo Baggins, Tolkien weaves a tale of heroism, friendship, and self-discovery. With its rich mythology and unforgettable characters, The Hobbit continues to inspire readers of all ages.",
+        "total_pages": 310,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Fantasy",
+            "Adventure",
+            "Middle-earth"
+        ],
+        "publisher": "George Allen & Unwin",
+        "year_of_publishing": 1937
+    },
+    {
+        "id": 9,
+        "book_name": "War and Peace",
+        "author": "Leo Tolstoy",
+        "image": "https://i.ibb.co/dczrp1g/War-and-Peace.jpg",
+        "review": "Leo Tolstoy's War and Peace is an epic masterpiece that offers a panoramic view of Russian society during the Napoleonic Wars. Through the lives of characters like Pierre Bezukhov, Prince Andrei Bolkonsky, and Natasha Rostova, Tolstoy explores themes of love, war, and the search for meaning. With its sprawling narrative and profound insights into human nature, War and Peace remains one of the greatest achievements in world literature.",
+        "total_pages": 1225,
+        "rating": 4.9,
+        "category": "Fiction",
+        "tags": [
+            "Historical Fiction",
+            "Epic",
+            "Russian Literature"
+        ],
+        "publisher": "The Russian Messenger",
+        "year_of_publishing": 1869
+    },
+    {
+        "id": 10,
+        "book_name": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/bz5sx0x/The-Lord-of-the-Rings.jpg",
+        "review": "J.R.R. Tolkien's The Lord of the Rings is a timeless fantasy epic that transports readers to the enchanting world of Middle-earth. Through the journey of Frodo Baggins and the Fellowship of the Ring, Tolkien weaves a tale of heroism, sacrifice, and the struggle against evil. With its rich mythology and unforgettable characters, The Lord of the Rings continues to captivate readers around the world.",
+        "total_pages": 1178,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": [
+            "Fantasy",
+            "Adventure",
+            "Middle-earth"
+        ],
+        "publisher": "George Allen & Unwin",
+        "year_of_publishing": 1954
+    },
+    {
+        "id": 11,
+        "book_name": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "image": "https://i.ibb.co/PcMcnb7/Crimeandpunishmentcover.png",
+        "review": "Fyodor Dostoevsky's Crime and Punishment is a psychological thriller that delves into the mind of its troubled protagonist, Raskolnikov. Set in St. Petersburg, the novel explores themes of guilt, redemption, and the nature of morality. With its complex characters and gripping narrative, Crime and Punishment remains a seminal work of Russian literature.",
+        "total_pages": 551,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Psychological Fiction",
+            "Russian Literature",
+            "Crime"
+        ],
+        "publisher": "The Russian Messenger",
+        "year_of_publishing": 1866
+    },
+    {
+        "id": 12,
+        "book_name": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "image": "https://i.ibb.co/W0MkpWH/The-Picture-of-Dorian-Gray.jpg",
+        "review": "Oscar Wilde's The Picture of Dorian Gray is a provocative exploration of vanity, decadence, and the pursuit of eternal youth. Through the titular character's Faustian bargain, Wilde delves into the consequences of aestheticism and moral corruption. With its witty dialogue and philosophical depth, The Picture of Dorian Gray remains a classic of Victorian literature.",
+        "total_pages": 254,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Gothic",
+            "Philosophical Fiction",
+            "Victorian"
+        ],
+        "publisher": "Ward, Lock & Co.",
+        "year_of_publishing": 1890
+    }
+]
