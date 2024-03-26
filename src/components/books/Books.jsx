@@ -1,8 +1,9 @@
-import useApi from "../../hooks/useApi";
+
 import BooksCard from "./BooksCard";
+import useBookData from "../../hooks/useBookData";
 
 const Books = () => {
-        const {data} = useApi()
+        const {data} = useBookData();
     return (
         <div className="container mx-auto py-16">
             <div className="text-center">

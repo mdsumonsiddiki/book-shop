@@ -1,16 +1,17 @@
-import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { saveLocalData } from '../utility/utility';
 
 
 const BooksDetails = () => {
-    const [book, setBook] = useState({})
-   const books = useLoaderData();
-   const {id} = useParams()
-   useEffect(()=>{
-    const singleBook = books.find(item => item.id == id);
-    setBook(singleBook);
-},[books, id])
-const {book_name, author, image, rating , total_pages, category, tags, publisher, year_of_publishing, review} = book || {};
+    const books = useLoaderData();
+    const { id } = useParams()
+    const idInt = parseInt(id)
+    const book = books.find(item => item.id == idInt)
+    const {book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, review } = book;
+
+    const handleBookRead = () =>{
+        saveLocalData(idInt)
+    }
 
     return (
         <div className='container mx-auto flex gap-8 mt-16 pb-16'>
@@ -24,7 +25,8 @@ const {book_name, author, image, rating , total_pages, category, tags, publisher
                 <p className='text-black text-xl font-medium'><span className='font-bold text-2xl'>Review :</span> {review}</p>
                 <ul className='flex items-center gap-4 border-b-2 pb-7 border-dashed border-black border-opacity-15'>
                     <li className='text-black text-2xl font-bold'>Tag</li>
-                    <li className='text-praimary rounded-2xl bg-praimary bg-opacity-5 font-medium py-2 px-3'><a>hjkhjkh</a></li>
+                    {
+                        book.tags.map((item, idx) => <li key={idx} className='text-praimary rounded-2xl bg-praimary bg-opacity-5 font-medium py-2 px-3'>{item}</li>)}
                 </ul>
                 <div className='w-4/6 space-y-5 pb-7'>
                     <p className='text-black text-xl font-medium flex items-center justify-between'>Number of Pages: <span className='font-bold text-2xl'>{total_pages}</span></p>
@@ -33,8 +35,8 @@ const {book_name, author, image, rating , total_pages, category, tags, publisher
                     <p className='text-black text-xl font-medium flex items-center justify-between'>Rating: <span className='font-bold text-2xl'>{rating}</span></p>
                 </div>
                 <div className='space-x-7'>
-                    <Link className="py-5 px-7 rounded-lg font-bold text-[#ffff] bg-praimary hover:bg-praimary">Read</Link>
-                    <Link className="py-5 px-7 rounded-lg font-bold text-[#ffff]  bg-second hover:bg-second">Wishlist</Link>
+                    <Link to={'/booklist'} onClick={()=>handleBookRead(id)} className="py-5 px-7 rounded-lg font-bold text-[#ffff] bg-praimary hover:bg-praimary">Read</Link>
+                    <Link to={'/booklist/whishlist'} className="py-5 px-7 rounded-lg font-bold text-[#ffff]  bg-second hover:bg-second">Wishlist</Link>
                 </div>
             </div>
         </div>
