@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 const Card = ({ book }) => {
-    const { book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, tags } = book;
+    const { book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, tags, id } = book;
 
     return (
         <div className='flex items-center gap-12 p-6 border-2 border-black border-opacity-15 rounded-xl'>
@@ -27,13 +28,13 @@ const Card = ({ book }) => {
                 <ul className='flex items-center gap-7 pt-5 border-t-2 border-black border-opacity-15'>
                     <li className='text-[#328EFF] font-medium bg-[#328EFF] bg-opacity-10 py-3 px-4 rounded-full'>Category: {category}</li>
                     <li className='text-[#FFAC33] font-medium bg-[#FFAC33] bg-opacity-10 py-3 px-4 rounded-full'>Rating: {rating}</li>
-                    <li className='text-[#23BE0A] font-medium bg-[#23BE0A] bg-opacity-10 py-3 px-4 rounded-full'>View Details</li>
+                    <li><Link to={`/books/${id}`} className='text-[#23BE0A] font-medium bg-[#23BE0A] bg-opacity-10 py-3 px-4 rounded-full'> View Details</Link></li>
                 </ul>
             </div>
         </div>
     );
 };
 Card.propTypes = {
-    book: PropTypes.object,
+    book: PropTypes.o,
 }
 export default Card;

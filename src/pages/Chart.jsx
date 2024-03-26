@@ -48,8 +48,8 @@ export default function Chart() {
     return (
         <div className='container mx-auto mt-24 flex items-center justify-center'>
             <BarChart
-            width={1300}
-            height={800}
+            width={1100}
+            height={700}
             data={loadData}
         >
             <CartesianGrid strokeDasharray="3 3" />
