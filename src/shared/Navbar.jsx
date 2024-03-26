@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
     const link = <>
         <NavLink className={`text-black text-lg`}>Home</NavLink>
-        <NavLink className={`text-black text-lg`}>Listed Books</NavLink>
+        <NavLink to={'booklist'} className={`text-black text-lg`}>Listed Books</NavLink>
         <NavLink to={'/chart'} className={`text-black text-lg`}>Pages to Read</NavLink>
     </>
     return (
