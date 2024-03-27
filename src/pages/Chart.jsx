@@ -31,7 +31,7 @@ export default function Chart() {
 
     }, [loadData]);
     return (
-        <div className='container mx-auto mt-16 relative flex items-center justify-center bg-black bg-opacity-5 py-24 rounded-xl'>
+        <div className='container mx-auto mb-10 mt-6 lg:mt-16 relative flex items-center justify-center bg-black bg-opacity-5 py-8 md:py-16 lg:py-24 rounded-xl'>
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                 {
                     data.length == 0 ? <div>

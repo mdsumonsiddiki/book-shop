@@ -13,7 +13,7 @@ const ContactUs = () => {
                 ></iframe>
             </div>
             <div className="container mx-auto mt-10 px-3 pb-6">
-                <div className="py-6 border-2 rounded-lg border-second">
+                <div className="py-7 lg:py-16 border-2 rounded-lg border-second px-6 md:px-4 lg:px-0">
                     <div className="grid grid-cols-1 lg:px-8 md:grid-cols-2 md:divide-x">
                         <div className="py-6 md:py-0 md:px-6">
                             <h1 className="text-4xl font-bold">Contact Details</h1>

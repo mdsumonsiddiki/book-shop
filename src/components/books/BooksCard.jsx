@@ -10,12 +10,12 @@ const BooksCard = ({book}) => {
                 <img className='w-[168px] h-[200px] object-cover' src={image} alt="" />
             </div>
             <div className='space-y-5 mt-5'>
-                <ul className='flex items-center gap-2'>
+                <ul className='flex items-center flex-wrap lg:flex-nowrap gap-2'>
                     {
                     tags.map((tag,idx) => <li key={idx} className='text-praimary rounded-2xl bg-praimary bg-opacity-5 font-medium py-2 px-3'>{tag}</li>)
                     }
                 </ul>
-                <h2 className='text-3xl text-black font-extrabold'>{book_name}</h2>
+                <h2 className='text-2xl lg:text-3xl text-black font-extrabold'>{book_name}</h2>
                 <p className='text-black font-medium'>By : {author}</p>
                 <div className='flex items-center justify-between border-t-2 border-dashed border-black border-opacity-15 pt-5'>
                     <h3 className='text-black font-medium'>{category}</h3>

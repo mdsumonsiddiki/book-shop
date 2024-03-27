@@ -4,11 +4,11 @@ const EorrorPage = () => {
     return (
         <div className="container mx-auto w-screen h-screen flex items-center justify-center text-center">
             <div className="space-y-5 bg-praimary p-20 rounded-xl shadow-2xl bg-opacity-20">
-                <h1 className="text-6xl font-extrabold text-black">404 - Page Not Found</h1>
-                <p className="text-4xl font-bold text-black">Oops! The page youre looking for doesn t exist.</p>
-                <p className=" text-3xl font-semibold text-black">Please check the URL and try again.</p>
+                <h1 className="text-3xl md:text-4xl lg:text-6xl font-extrabold text-black">404 - Page Not Found</h1>
+                <p className="text-2xl lg:text-4xl font-bold text-black">Oops! The page youre looking for doesn t exist.</p>
+                <p className=" text-xl lg:text-3xl font-semibold text-black">Please check the URL and try again.</p>
                 <div className="pt-10">
-                    <Link to='/' className=" bg-second text-white text-2xl font-medium py-3 px-7 rounded-xl">Back To Home</Link>
+                    <Link to='/' className=" bg-second text-white text-2xl font-medium py-3 px-5 lg:px-7 rounded-xl">Back To Home</Link>
                 </div>
             </div>
         </div>
