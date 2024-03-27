@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useLoaderData } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getLocalData } from '../utility/utility';
+import ReadNotFound from '../components/booksList/ReadNotFound';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 const getPath = (x, y, width, height) => {
@@ -30,21 +31,29 @@ export default function Chart() {
 
     }, [loadData]);
     return (
-        <div className='container mx-auto mt-24 flex items-center justify-center bg-black bg-opacity-5 py-24 rounded-xl'>
+        <div className='container mx-auto mt-16 relative flex items-center justify-center bg-black bg-opacity-5 py-24 rounded-xl'>
+            <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                {
+                    data.length == 0 ? <div>
+                        <ReadNotFound />
+                    </div> : null
+                }
+            </div>
             <BarChart
-            width={1100}
-            height={700}
-            data={data}
-        >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="book_name" />
-            <YAxis />
-            <Bar dataKey="total_pages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % 6]} />
-                ))}
-            </Bar>
-        </BarChart>
+                width={1100}
+                height={700}
+                data={data}
+            >
+
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="book_name" />
+                <YAxis />
+                <Bar dataKey="total_pages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                    {data.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={colors[index % 6]} />
+                    ))}
+                </Bar>
+            </BarChart>
         </div>
     );
 }

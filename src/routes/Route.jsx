@@ -7,6 +7,7 @@ import ReadBook from "../components/booksList/ReadBook";
 import BooksWhishlist from "../components/booksList/BooksWhishlist";
 import Chart from "../pages/Chart";
 import EorrorPage from "../pages/EorrorPage";
+import ContactUs from "../pages/ContactUs";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
                 path:'/chart',
                 element: <Chart/>,
                 loader: ()=> fetch('../books.json')
+            },
+            {
+                path:'/contact',
+                element: <ContactUs/>,
             }
         ]
     },

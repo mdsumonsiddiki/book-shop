@@ -2,9 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const link = <>
-        <NavLink className={`text-black text-lg`}>Home</NavLink>
-        <NavLink to={'booklist'} className={`text-black text-lg`}>Listed Books</NavLink>
-        <NavLink to={'/chart'} className={`text-black text-lg`}>Pages to Read</NavLink>
+        <NavLink to='/' className={({ isActive }) => isActive ? "text-praimary text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second": " text-black text-lg btn"}>Home</NavLink>
+        <NavLink to={'/booklist'}className={({ isActive }) => isActive ? "text-praimary text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second": " text-black text-lg btn"}>Listed Books</NavLink>
+        <NavLink to={'/chart'} className={({ isActive }) => isActive ? "text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second text-praimary": " text-black text-lg btn"}>Pages to Read</NavLink>
+        <NavLink to={'/contact'} className={({ isActive }) => isActive ? "text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second text-praimary": " text-black text-lg btn"}>Contacts</NavLink>
     </>
     return (
         <nav className="container mx-auto pt-4">
