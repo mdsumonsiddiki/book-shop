@@ -5,6 +5,7 @@ const Navbar = () => {
         <NavLink to='/' className={({ isActive }) => isActive ? "text-praimary text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second": " text-black text-lg btn"}>Home</NavLink>
         <NavLink to={'/booklist'}className={({ isActive }) => isActive ? "text-praimary text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second": " text-black text-lg btn"}>Listed Books</NavLink>
         <NavLink to={'/chart'} className={({ isActive }) => isActive ? "text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second text-praimary": " text-black text-lg btn"}>Pages to Read</NavLink>
+        <NavLink to={'/about'} className={({ isActive }) => isActive ? "text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second text-praimary": " text-black text-lg btn"}>About Us</NavLink>
         <NavLink to={'/contact'} className={({ isActive }) => isActive ? "text-lg btn border-praimary bg-transparent hover:bg-transparent hover:border-second text-praimary": " text-black text-lg btn"}>Contacts</NavLink>
     </>
     return (

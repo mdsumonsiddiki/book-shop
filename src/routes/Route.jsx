@@ -8,6 +8,7 @@ import BooksWhishlist from "../components/booksList/BooksWhishlist";
 import Chart from "../pages/Chart";
 import EorrorPage from "../pages/EorrorPage";
 import ContactUs from "../pages/ContactUs";
+import AboutUs from "../pages/AboutUs";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
             {
                 path:'/contact',
                 element: <ContactUs/>,
+            },
+            {
+                path:'/about',
+                element: <AboutUs/>,
             }
         ]
     },
