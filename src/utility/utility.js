@@ -1,13 +1,11 @@
 import toast from 'react-hot-toast';
 
-
 const getLocalData = () => {
     const getData = localStorage.getItem('read-books');
     if (getData) {
         return JSON.parse(getData);
     }
     return [];
-
 }
 const saveLocalData = (id) => {
     const getStoredData = getLocalData();
@@ -15,19 +13,21 @@ const saveLocalData = (id) => {
     if (!isExit) {
         getStoredData.push(id)
         localStorage.setItem('read-books', JSON.stringify(getStoredData));
-        toast('Books Added to Read List', {
+        toast('Successfully Books Added to Read List', {
             style: {
-                background: '#23BE0A',
+                background: '#59C6D2',
                 color: '#ffffff',
+                border: '1px solid #000000'
             },
             icon: '✔️'
         });
     }
     else {
-        toast('Books Added to Read list.', {
+        toast('Books Already Added to Read list.', {
             style: {
-                background: '#59C6D2',
+                background: '#A0153E',
                 color: '#ffffff',
+                border: '1px solid #000000'
             },
             icon: '❌'
         });
@@ -43,31 +43,49 @@ const getWhishData = () => {
 
 }
 const saveWishData = (id) => {
+    const localData = getLocalData();
+    const isRead = localData.find(ld => ld == id);
     const getStoredData = getWhishData();
     const isExit = getStoredData.find(getId => getId == id)
-    const readData = getLocalData();
-    const isRead = readData.find(read => read == isExit);
+
+
+
     if (!isRead) {
-        getStoredData.push(id)
+        if (!isExit) {
+            getStoredData.push(id)
             localStorage.setItem('WhishList', JSON.stringify(getStoredData));
-            toast('Books Added to WhisList', {
+            toast('Successfully Books Added to WhisList', {
                 style: {
-                    background: '#23BE0A',
+                    background: '#59C6D2',
                     color: '#ffffff',
+                    border: '1px solid #000000'
                 },
                 icon: '✔️'
             });
-
+        }
+        else {
+            toast('Books Already Added to WhishList.', {
+                style: {
+                    background: '#A0153E',
+                    color: '#ffffff',
+                    border: '1px solid #000000'
+                },
+                icon: '❌'
+            });
+        }
     }
     else {
-        toast('Books Added to WhishList.', {
+        toast('You have already read this book.', {
             style: {
-                background: '#59C6D2',
+                background: '#A0153E',
                 color: '#ffffff',
+                border: '1px solid #000000'
             },
-            icon: '❌'
+            icon: '👏'
         });
     }
 
 }
-export { getLocalData, saveLocalData, getWhishData, saveWishData }
+
+
+export { getLocalData, saveLocalData, getWhishData, saveWishData}

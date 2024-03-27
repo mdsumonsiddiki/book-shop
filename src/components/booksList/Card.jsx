@@ -35,6 +35,6 @@ const Card = ({ book }) => {
     );
 };
 Card.propTypes = {
-    book: PropTypes.o,
+    book: PropTypes.object,
 }
 export default Card;

@@ -1,34 +1,9 @@
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import PropTypes from 'prop-types';
 import { useLoaderData } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { getLocalData } from '../utility/utility';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-
-// const data = [
-//     {
-//         name: 'To Kill a Mockingbird',
-//         pages: 281
-//     },
-//     {
-//         name: '1984',
-//         pages: 328
-//     },
-//     {
-//         name: 'The Great Gatsby',
-//         pages: 180
-//     },
-//     {
-//         name: 'Pride and Prejudice',
-//         pages: 279
-//     },
-//     {
-//         name: 'The Catcher in the Rye',
-//         pages: 214
-//     },
-//     {
-//         name: 'Harry Potter',
-//         pages: 223
-//     },
-// ];
 
 const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
@@ -44,19 +19,28 @@ const TriangleBar = (props) => {
 };
 
 export default function Chart() {
-    const loadData = useLoaderData()
+    const [data, setData] = useState([])
+    const loadData = useLoaderData();
+    useEffect(() => {
+        const localData = getLocalData();
+        if (loadData.length > 0) {
+            const books = loadData.filter(book => localData.includes(book.id))
+            setData(books);
+        }
+
+    }, [loadData]);
     return (
-        <div className='container mx-auto mt-24 flex items-center justify-center'>
+        <div className='container mx-auto mt-24 flex items-center justify-center bg-black bg-opacity-5 py-24 rounded-xl'>
             <BarChart
             width={1100}
             height={700}
-            data={loadData}
+            data={data}
         >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="book_name" />
             <YAxis />
             <Bar dataKey="total_pages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                {loadData.map((entry, index) => (
+                {data.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={colors[index % 6]} />
                 ))}
             </Bar>

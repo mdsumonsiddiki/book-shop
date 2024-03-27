@@ -1,10 +1,16 @@
 // import { FaAngleDown } from "react-icons/fa6";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import PropTypes from 'prop-types';
+
+export const ShortContext = createContext();
 
 const BookList = () => {
     const [tabIndex, setTabIndex] = useState(0);
-
+    const [shortValue, setShortValue] = useState('')
+    const handleShort = (text) => {
+        setShortValue(text)
+    }
     return (
         <div className="container mx-auto mt-7">
             <div className="bg-black bg-opacity-5 text-center p-8 rounded-xl">
@@ -12,11 +18,13 @@ const BookList = () => {
             </div>
             <div className="mt-7 text-center">
                 <details className="dropdown">
-                    <summary className="m-1 py-4 px-6 font-bold text-2xl rounded-xl flex justify-center items-center gap-2 bg-praimary text-white">Sort By
+                    <summary className="m-1 py-2 px-7 font-bold text-2xl rounded-xl flex justify-center items-center gap-2 bg-praimary text-white cursor-pointer">Sort By
                     </summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-black bg-opacity-5 rounded-box w-52 text-2xl">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+
+                        <li><button onClick={() => handleShort('rating')} className="btn">Number of Rating</button></li>
+                        <li><button onClick={() => handleShort('year')} className="btn">Publishing Years</button></li>
+                        <li><button onClick={() => handleShort('page')} className="btn">Number of Pages</button></li>
                     </ul>
                 </details>
             </div>
@@ -29,10 +37,14 @@ const BookList = () => {
                 </Link>
             </div>
             <div>
-                <Outlet/>
+                <ShortContext.Provider value={shortValue}>
+                    <Outlet />
+                </ShortContext.Provider>
             </div>
         </div>
     );
 };
-
+BookList.propTypes = {
+    hangleFiter: PropTypes.func,
+}
 export default BookList;
