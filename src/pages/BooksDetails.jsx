@@ -7,12 +7,12 @@ const BooksDetails = () => {
     const { id } = useParams()
     const idInt = parseInt(id)
     const book = books.find(item => item.id == idInt)
-    const {book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, review } = book;
+    const { book_name, author, image, rating, total_pages, category, publisher, year_of_publishing, review } = book;
 
-    const handleBookRead = () =>{
+    const handleBookRead = () => {
         saveLocalData(idInt)
     }
-    const handleWhiteList = ()=>{
+    const handleWhiteList = () => {
         saveWishData(idInt)
     }
 

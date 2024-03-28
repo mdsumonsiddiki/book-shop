@@ -1,4 +1,4 @@
-// import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 import sendBanner from '../assets/secondBanner.jpg'
 import { createContext, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
@@ -30,9 +30,10 @@ const BookList = () => {
                         Wishlist Books
                     </Link>
                 </div>
-                <div className='border-b lg:w-8/12 lg:-ml-9 flex justify-end items-center'>
+                <div className='lg:w-8/12 lg:-ml-9 flex justify-end items-center'>
                     <details className="dropdown lg:mr-12">
-                        <summary className="m-1 py-2 px-7 font-bold text-2xl rounded-xl flex justify-center items-center gap-2 bg-second text-white cursor-pointer">Sort By
+                        <summary className="m-1 py-2 px-3 lg:px-5 font-bold text-xl lg:text-2xl rounded-xl flex justify-center items-center gap-2 bg-second text-white cursor-pointer">Sort By
+                        <FaAngleDown />
                         </summary>
                         <ul className="menu dropdown-content z-[1] text-2xl bg-black rounded-xl space-y-1 bg-opacity-55">
                             <li><button onClick={() => handleShort('rating')} className="btn bg-second">Number of Rating</button></li>

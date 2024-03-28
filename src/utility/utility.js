@@ -13,7 +13,7 @@ const saveLocalData = (id) => {
     if (!isExit) {
         getStoredData.push(id)
         localStorage.setItem('read-books', JSON.stringify(getStoredData));
-        toast('Successfully Books Added to Read List', {
+        toast('Successfully Books Added to ReadList', {
             style: {
                 background: '#59C6D2',
                 color: '#ffffff',
@@ -23,7 +23,7 @@ const saveLocalData = (id) => {
         });
     }
     else {
-        toast('Books Already Added to Read list.', {
+        toast('Books Already Added to ReadList.', {
             style: {
                 background: '#A0153E',
                 color: '#ffffff',
@@ -47,14 +47,11 @@ const saveWishData = (id) => {
     const isRead = localData.find(ld => ld == id);
     const getStoredData = getWhishData();
     const isExit = getStoredData.find(getId => getId == id)
-
-
-
     if (!isRead) {
         if (!isExit) {
             getStoredData.push(id)
             localStorage.setItem('WhishList', JSON.stringify(getStoredData));
-            toast('Successfully Books Added to WhisList', {
+            toast('Successfully Books Added to Wishlist', {
                 style: {
                     background: '#59C6D2',
                     color: '#ffffff',
@@ -64,7 +61,7 @@ const saveWishData = (id) => {
             });
         }
         else {
-            toast('Books Already Added to WhishList.', {
+            toast('Books Already Added to Wishlist.', {
                 style: {
                     background: '#A0153E',
                     color: '#ffffff',
